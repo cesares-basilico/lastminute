@@ -1,0 +1,101 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Sales",
+		"_postman_id": "be9aaab6-a8a5-75d5-db84-a4015ea2602b",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"url": "localhost:9090/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"cesare\",\n\t\"password\": \"cesare\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Login admin",
+			"request": {
+				"url": "localhost:9090/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"cesareAdmin\",\n\t\"password\": \"cesareAdmin\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "product list",
+			"request": {
+				"url": "localhost:9090/products",
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Auth",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJpZCI6IjFhNWFhMWU3LWFkNTEtNDk5Yy1hYjVjLWVjMmVkYzZlNTE3OCIsImV4cCI6MTU5OTQwMzQ0NiwiTmFtZSI6IkNlc2FyZSBTaW1vbmUifQ.2b0MQwAJzHCj5jmEvXY7Zq73xVS-bU20-02XiJa_neo",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"description\": \"box of imported chocolatesadsfdsadffdsafdsadsa\",\n\t\"price\": 1125,\n\t\"productTypeId\": 23\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create cart",
+			"request": {
+				"url": "localhost:9090/shoppingCart",
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiVVNFUiIsImlkIjoiMWE1YWExZTctYWQ1MS00OTljLWFiNWMtZWMyZWRjNmU1MTc3IiwiZXhwIjoxNTk5NDI0MjA1LCJOYW1lIjoiQ2VzYXJlIFNpbW9uZSJ9.rGRlWm25DWaXNt7jbDX4gAbdfGfU0CPvwipAoM53JrY",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"lines\":[\n\t\t{\n\t\t\t\"productId\":\"490990be-06fa-4bb6-89c4-c7a63b52b094\",\n\t\t\t\"quantity\":1\n\t\t},\n\t\t{\n\t\t\t\"productId\":\"a7377c28-d406-4ced-ac58-3eaa62d5de69\",\n\t\t\t\"quantity\":1\n\t\t},\n\t\t{\n\t\t\t\"productId\":\"3c9c1ff8-30a1-45ee-b1f4-891198cd5a1a\",\n\t\t\t\"quantity\":1\n\t\t}\n\t\t]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

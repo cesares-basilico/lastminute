@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet author="Cesare (generated)" id="1599425856019-1">
+        <createTable tableName="product">
+            <column name="id" type="VARCHAR(36)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="price" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="product_type_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueNumeric="0" name="imported" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="Cesare (generated)" id="1599425856019-2">
+        <createTable tableName="product_type_lkp">
+            <column autoIncrement="true" name="id" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="description" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="key" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="Cesare (generated)" id="1599425856019-3">
+        <createTable tableName="shopping_cart">
+            <column name="id" type="VARCHAR(36)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="user_id" type="VARCHAR(36)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="taxes" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="total" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="Cesare (generated)" id="1599425856019-4">
+        <createTable tableName="shopping_cart_line">
+            <column name="id" type="VARCHAR(36)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="quantity" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="product_id" type="VARCHAR(36)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="shopping_cart_id" type="VARCHAR(36)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="Cesare (generated)" id="1599425856019-5">
+        <createTable tableName="user">
+            <column name="id" type="VARCHAR(36)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="username" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="password" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="active" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="role" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="Cesare (generated)" id="1599425856019-6">
+        <insert tableName="product">
+            <column name="id" value="0ea0d621-40e7-4e2e-9d3d-c419039fa52a"/>
+            <column name="description" value="imported bottle of perfume"/>
+            <column name="price" valueNumeric="2799"/>
+            <column name="product_type_id" valueNumeric="5"/>
+            <column name="imported" valueNumeric="1"/>
+        </insert>
+        <insert tableName="product">
+            <column name="id" value="13b5d088-d0d0-4893-b2f4-990cae68deed"/>
+            <column name="description" value="bottle of perfume"/>
+            <column name="price" valueNumeric="1899"/>
+            <column name="product_type_id" valueNumeric="5"/>
+            <column name="imported" valueNumeric="0"/>
+        </insert>
+        <insert tableName="product">
+            <column name="id" value="3c9c1ff8-30a1-45ee-b1f4-891198cd5a1a"/>
+            <column name="description" value="chocolate bar"/>
+            <column name="price" valueNumeric="85"/>
+            <column name="product_type_id" valueNumeric="2"/>
+            <column name="imported" valueNumeric="0"/>
+        </insert>
+        <insert tableName="product">
+            <column name="id" value="490990be-06fa-4bb6-89c4-c7a63b52b094"/>
+            <column name="description" value="book"/>
+            <column name="price" valueNumeric="1249"/>
+            <column name="product_type_id" valueNumeric="1"/>
+            <column name="imported" valueNumeric="0"/>
+        </insert>
+        <insert tableName="product">
+            <column name="id" value="5673c8a8-7495-4203-ba53-54dc135de899"/>
+            <column name="description" value="imported bottle of perfume"/>
+            <column name="price" valueNumeric="4750"/>
+            <column name="product_type_id" valueNumeric="5"/>
+            <column name="imported" valueNumeric="1"/>
+        </insert>
+        <insert tableName="product">
+            <column name="id" value="5f85d6e3-da16-4998-be08-b4ba5791adee"/>
+            <column name="description" value="imported box of chocolates"/>
+            <column name="price" valueNumeric="1000"/>
+            <column name="product_type_id" valueNumeric="2"/>
+            <column name="imported" valueNumeric="1"/>
+        </insert>
+        <insert tableName="product">
+            <column name="id" value="7dbf4c02-8331-4819-a593-72e524edb472"/>
+            <column name="description" value="packet of headache pills"/>
+            <column name="price" valueNumeric="975"/>
+            <column name="product_type_id" valueNumeric="3"/>
+            <column name="imported" valueNumeric="0"/>
+        </insert>
+        <insert tableName="product">
+            <column name="id" value="a7377c28-d406-4ced-ac58-3eaa62d5de69"/>
+            <column name="description" value="music CD"/>
+            <column name="price" valueNumeric="1499"/>
+            <column name="product_type_id" valueNumeric="4"/>
+            <column name="imported" valueNumeric="0"/>
+        </insert>
+        <insert tableName="product">
+            <column name="id" value="cf1fc3bb-690b-413b-85b4-74bd6a6013fa"/>
+            <column name="description" value="box of imported chocolates"/>
+            <column name="price" valueNumeric="1185"/>
+            <column name="product_type_id" valueNumeric="2"/>
+            <column name="imported" valueNumeric="1"/>
+        </insert>
+    </changeSet>
+    <changeSet author="Cesare (generated)" id="1599425856019-7">
+        <insert tableName="product_type_lkp">
+            <column name="id" valueNumeric="1"/>
+            <column name="description" value="Books"/>
+            <column name="key" value="BOOK"/>
+        </insert>
+        <insert tableName="product_type_lkp">
+            <column name="id" valueNumeric="2"/>
+            <column name="description" value="Food"/>
+            <column name="key" value="FOOD"/>
+        </insert>
+        <insert tableName="product_type_lkp">
+            <column name="id" valueNumeric="3"/>
+            <column name="description" value="Medical"/>
+            <column name="key" value="MEDICAL"/>
+        </insert>
+        <insert tableName="product_type_lkp">
+            <column name="id" valueNumeric="4"/>
+            <column name="description" value="Music"/>
+            <column name="key" value="MUSIC"/>
+        </insert>
+        <insert tableName="product_type_lkp">
+            <column name="id" valueNumeric="5"/>
+            <column name="description" value="Perfumes &amp; Fragrances"/>
+            <column name="key" value="PERF_FRAG"/>
+        </insert>
+    </changeSet>
+    <changeSet author="Cesare (generated)" id="1599425856019-8">
+        <insert tableName="user">
+            <column name="id" value="1a5aa1e7-ad51-499c-ab5c-ec2edc6e5177"/>
+            <column name="name" value="Cesare Simone"/>
+            <column name="username" value="cesare"/>
+            <column name="password" value="cesare"/>
+            <column name="active" valueNumeric="1"/>
+            <column name="role" value="USER"/>
+        </insert>
+        <insert tableName="user">
+            <column name="id" value="1a5aa1e7-ad51-499c-ab5c-ec2edc6e5178"/>
+            <column name="name" value="Cesare Simone"/>
+            <column name="username" value="cesareAdmin"/>
+            <column name="password" value="cesareAdmin"/>
+            <column name="active" valueNumeric="1"/>
+            <column name="role" value="ADMIN"/>
+        </insert>
+    </changeSet>
+    <changeSet author="Cesare (generated)" id="1599425856019-9">
+        <addPrimaryKey columnNames="id" constraintName="PRIMARY" tableName="product"/>
+    </changeSet>
+    <changeSet author="Cesare (generated)" id="1599425856019-10">
+        <addPrimaryKey columnNames="id" constraintName="PRIMARY" tableName="shopping_cart"/>
+    </changeSet>
+    <changeSet author="Cesare (generated)" id="1599425856019-11">
+        <addPrimaryKey columnNames="id" constraintName="PRIMARY" tableName="shopping_cart_line"/>
+    </changeSet>
+    <changeSet author="Cesare (generated)" id="1599425856019-12">
+        <addPrimaryKey columnNames="id" constraintName="PRIMARY" tableName="user"/>
+    </changeSet>
+    <changeSet author="Cesare (generated)" id="1599425856019-13">
+        <createIndex indexName="product_product_type_fk" tableName="product">
+            <column name="product_type_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="Cesare (generated)" id="1599425856019-14">
+        <createIndex indexName="sc_line_product_fk" tableName="shopping_cart_line">
+            <column name="product_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="Cesare (generated)" id="1599425856019-15">
+        <createIndex indexName="sc_line_sc_fk" tableName="shopping_cart_line">
+            <column name="shopping_cart_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="Cesare (generated)" id="1599425856019-16">
+        <createIndex indexName="shopping_cart_user_fk" tableName="shopping_cart">
+            <column name="user_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="Cesare (generated)" id="1599425856019-17">
+        <addForeignKeyConstraint baseColumnNames="product_type_id" baseTableName="product" constraintName="product_product_type_fk" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id" referencedTableName="product_type_lkp"/>
+    </changeSet>
+    <changeSet author="Cesare (generated)" id="1599425856019-18">
+        <addForeignKeyConstraint baseColumnNames="product_id" baseTableName="shopping_cart_line" constraintName="sc_line_product_fk" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id" referencedTableName="product"/>
+    </changeSet>
+    <changeSet author="Cesare (generated)" id="1599425856019-19">
+        <addForeignKeyConstraint baseColumnNames="shopping_cart_id" baseTableName="shopping_cart_line" constraintName="sc_line_sc_fk" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id" referencedTableName="shopping_cart"/>
+    </changeSet>
+    <changeSet author="Cesare (generated)" id="1599425856019-20">
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="shopping_cart" constraintName="shopping_cart_user_fk" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id" referencedTableName="user"/>
+    </changeSet>
+</databaseChangeLog>

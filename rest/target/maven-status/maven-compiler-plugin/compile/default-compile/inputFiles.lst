@@ -1,0 +1,13 @@
+E:\Unicredit\sales\rest\src\main\java\it\lastminute\sales\security\SecurityConfig.java
+E:\Unicredit\sales\rest\src\main\java\it\lastminute\sales\SalesApplication.java
+E:\Unicredit\sales\rest\src\main\java\it\lastminute\sales\api\LoginApiController.java
+E:\Unicredit\sales\rest\src\main\java\it\lastminute\sales\api\ProductApiController.java
+E:\Unicredit\sales\rest\src\main\java\it\lastminute\sales\api\ShopApiController.java
+E:\Unicredit\sales\rest\src\main\java\it\lastminute\sales\security\authority\SalesGrantedAuthority.java
+E:\Unicredit\sales\rest\src\main\java\it\lastminute\sales\security\CustomAuthenticationProvider.java
+E:\Unicredit\sales\rest\src\main\java\it\lastminute\sales\security\authentication\SalesAuthentication.java
+E:\Unicredit\sales\rest\src\main\java\it\lastminute\sales\RestExceptionHandler.java
+E:\Unicredit\sales\rest\src\main\java\it\lastminute\sales\security\filter\SalesFilter.java
+E:\Unicredit\sales\rest\src\main\java\it\lastminute\sales\security\handler\JsonErrorMessage.java
+E:\Unicredit\sales\rest\src\main\java\it\lastminute\sales\api\UserApiController.java
+E:\Unicredit\sales\rest\src\main\java\it\lastminute\sales\security\handler\SalesAccessDeniedHandler.java
